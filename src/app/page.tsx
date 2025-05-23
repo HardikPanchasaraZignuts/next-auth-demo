@@ -2,6 +2,7 @@
 import { auth } from "@/auth";
 import Image from "next/image";
 import AuthButton from "./components/AuthButton";
+import SignInButton from "./components/SignInButton";
 
 export default async function Home() {
   const session = await auth();
@@ -31,7 +32,8 @@ export default async function Home() {
   }
   return (
     <div className="min-h-screen grid place-content-center">
-      <AuthButton type="login" />
+      {/* <AuthButton type="login" /> */}
+      <SignInButton />
 
       <p className="text-center mt-4">{`try protected route manually "/dashboard"`}</p>
     </div>
