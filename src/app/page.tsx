@@ -26,16 +26,20 @@ export default async function Home() {
           </div>
           <AuthButton type="logout" />
         </div>
-        
+        <div className="mt-10">
+        <SignInButton pathname="/dashboard" buttonText="dashboard"  />
+        </div>
       </div>
     );
   }
   return (
     <div className="min-h-screen grid place-content-center">
       {/* <AuthButton type="login" /> */}
-      <SignInButton />
+      <SignInButton pathname="api/auth/signin" buttonText="Sign in" />
 
-      <p className="text-center mt-4">{`try protected route manually "/dashboard"`}</p>
+      <p className="text-center mt-4">
+        {`try to navigate protected route manually "/dashboard"`}{" "}
+      </p>
     </div>
   );
 }
